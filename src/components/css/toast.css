@@ -1,0 +1,21 @@
+.toast-container {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  transition: 0.2s;
+}
+.toast-item {
+  width: 300px;
+  background-color: var(--font);
+  color: white;
+  padding: 0.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.toast-item::after {
+  content: "x";
+  position: absolute;
+  right: 1rem;
+}
