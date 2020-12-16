@@ -34,7 +34,7 @@ html {
   align-items: flex-start;
 }
 .reset-btn {
-  position: absolute;
+  position: fixed;
   bottom: 1em;
   right: 1em;
   font-size: 1.5em;
