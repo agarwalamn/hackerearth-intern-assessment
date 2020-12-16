@@ -1,5 +1,5 @@
 .toast-container {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   transition: 0.2s;
@@ -12,6 +12,7 @@
   font-weight: bold;
   margin-top: 1rem;
   cursor: pointer;
+  box-shadow: 0 0 10px var(--font);
   transition: 0.2s;
 }
 .toast-item::after {

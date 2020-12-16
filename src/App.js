@@ -28,21 +28,21 @@ export default function App() {
   }, []);
 
   //handle toast functionalities
-  const removeToastItem = (id) => {
-    const newMessages = toast.filter((msg) => msg.id !== id);
+  const removeToastItems = (id) => {
+    const newMessages = [];
     setToast(newMessages);
   };
 
   const addToastItem = (id, message) => {
     const newToast = [...toast, { id, message }];
     setToast(newToast);
-    removeToastTimeout();
+    removeToastTimeout(id);
   };
 
   const removeToastTimeout = (id) => {
     setTimeout(() => {
-      removeToastItem(id);
-    }, 1500);
+      removeToastItems(id);
+    }, 1000);
   };
 
   //util to store data locally
@@ -100,7 +100,7 @@ export default function App() {
         <GrPowerReset />
       </div>
 
-      <ToastMessage message={toast} removeItem={removeToastItem} />
+      <ToastMessage message={toast} removeItem={removeToastTimeout} />
     </div>
   );
 }
